@@ -23,6 +23,12 @@ public static class Dog {
         }
         return d2;
     }
+    public Dog maxDog2(Dog d2) {
+        if (this.weightInPounds > d2.weightInPounds) {
+            return this;
+        }
+        return d2;
+    }
 }
 
 
