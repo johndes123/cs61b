@@ -161,23 +161,22 @@ public class Particle {
 
 
     public void action(Map<Direction, Particle> neighbors) {
-        Particle p = new Particle(flavor);
-        if (p.flavor == ParticleFlavor.EMPTY){
+        if (this.flavor == ParticleFlavor.EMPTY){
             return;
         }
-        if (p.flavor != ParticleFlavor.BARRIER) {
+        if (this.flavor != ParticleFlavor.BARRIER) {
             fall(neighbors);
         }
-        if (p.flavor == ParticleFlavor.WATER) {
+        if (this.flavor == ParticleFlavor.WATER) {
             flow(neighbors);
         }
-        if (p.flavor == ParticleFlavor.PLANT){
+        if (this.flavor == ParticleFlavor.PLANT){
             grow(neighbors);
         }
-        if (p.flavor == ParticleFlavor.FLOWER) {
+        if (this.flavor == ParticleFlavor.FLOWER) {
             grow(neighbors);
         }
-        if (p.flavor == ParticleFlavor.FIRE) {
+        if (this.flavor == ParticleFlavor.FIRE) {
             burn(neighbors);
         }
 
