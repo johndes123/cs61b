@@ -28,15 +28,20 @@ public class SLList {
     // first item at sentinel.next if it exists
     private IntNode sentinel;
     private int size;
+    private IntNode last;
 
     public SLList(int x) {
         sentinel = new IntNode(69, null);
-        sentinel.next = new IntNode(x, null);
+        IntNode first = new IntNode(x, null);
+        sentinel.next = first;
+
+        last = first;
         size = 1;
     }
 
     public SLList() {
         sentinel = new IntNode(69, null);
+        last = sentinel;
         size = 0;
     }
 
@@ -45,6 +50,9 @@ public class SLList {
      */
     public void addFirst(int x) {
         sentinel.next = new IntNode(x, sentinel.next);
+        if (size == 0) {
+            last = sentinel.next;
+        }
         size += 1;
     }
 
@@ -65,14 +73,20 @@ public class SLList {
             //return so that now you have nonempty SLList//
             //If it feels weird, can do if-else with everything below as else branch//
         }*/
-        size += 1;
-        IntNode p = sentinel;
+        IntNode newNode = new IntNode(x, null);
+
+        last.next = newNode;   // works even if empty
+        last = newNode;
+
+        size += 1; //this is the faster method hmmmm
+
+        /*IntNode p = sentinel;
 
         /* Advance p to the end of the list. */
-        while (p.next != null) {
+       /* while (p.next != null) {
             p = p.next;
         }
-        p.next = new IntNode(x, null);
+        p.next = new IntNode(x, null); */
     }
 
     /**
