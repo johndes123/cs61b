@@ -55,6 +55,7 @@ public class Particle {
     }
 
     public void flow(Map<Direction, Particle> neighbors) {
+
     }
 
     public void grow(Map<Direction, Particle> neighbors) {
@@ -64,5 +65,12 @@ public class Particle {
     }
 
     public void action(Map<Direction, Particle> neighbors) {
+        Particle p = new Particle(flavor);
+        if (p.flavor == ParticleFlavor.EMPTY){
+            return;
+        } else if (p.flavor != ParticleFlavor.BARRIER) {
+            fall(neighbors);
+        }
+
     }
 }
