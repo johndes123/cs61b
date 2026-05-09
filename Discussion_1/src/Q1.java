@@ -1,4 +1,21 @@
-public static List<Integer> even(List<Integer> L) {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Q1 {
+
+    public static List<Integer> even(List<Integer> L) {
+        List<Integer> output = new ArrayList<>();
+        for (Integer integer : L) {
+            if (integer % 2 == 0) {
+                output.add(integer);
+            }
+        }
+        return output;
+    }
+}
+
+
+/*public static List<Integer> even(List<Integer> L) {
     List<Integer> output = new ArrayList<>();
     for (Integer integer : L) {
         if (integer % 2 == 0) {
@@ -18,4 +35,4 @@ void main(){
     testlist.add(6);
     IO.println(even(testlist));
 
-}
+}*/
