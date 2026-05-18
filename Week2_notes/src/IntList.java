@@ -6,6 +6,7 @@ public class IntList {
         first = f;
         rest = r;
     }
+
     //Then we can add a size method to the class
     public int size() {
         if (rest == null) {

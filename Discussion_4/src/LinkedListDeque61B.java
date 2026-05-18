@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
+/*public class LinkedListDeque61B<T> implements Deque61B<T> {
 
-public class LinkedListDeque61B {
-}
+}*/
