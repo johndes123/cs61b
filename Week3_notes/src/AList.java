@@ -41,7 +41,7 @@ size = size + 1; */
     }
     items[size] = x;
     size += 1;
-}*/ //only double the arry when it is full?
+}*/ //only double the array when it is full?
 
 
  /* Glorp[] items = (Glorp []) new Object[8]; */ // syntax for generic Alist
